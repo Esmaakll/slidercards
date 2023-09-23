@@ -1,0 +1,63 @@
+body{
+    color :wheat;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    justify-content: center;
+    height:100vh;
+    margin:0;
+    overflow: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+.container{
+    display:flex ;
+    width: 90vw;
+
+}
+.yemekler{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    flex:0.5;
+    margin:10px;
+    position: relative;
+     transition: flex 0.7s ease-in;
+}
+
+.yemekler h3{
+    font-size: 34px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin:0px;
+    opacity: 0;
+}
+
+.yemekler.active{
+    flex: 5;
+}
+
+
+.yemekler.active h3{
+    text-decoration: underline;
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+
+@media (max-width: 600px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),.panel:nth-of-type(5){
+        display: none;
+    }
+}
+  
+
